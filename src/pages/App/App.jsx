@@ -18,7 +18,7 @@ export default function App() {
       <NavBar/>
       <Routes>
         <Route path='/alex' element={<div>
-          <h2>Alex was here</h2>
+          <h2>Mikee was here</h2>
           <button>Click me!</button>
         </div>}
         />
