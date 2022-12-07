@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import NewPage from '../NewPage/NewPage';
 import InformationPage from '../InformationPage/InformationPage';
@@ -9,13 +10,14 @@ import './App.css';
 
 export default function App() {
   //im intentionally leaving this empty (null)
-  const [user, setUser] = useState("mikee")
+  const [user, setUser] = useState(getUser())
   return (
     <div className="App">
       App
       {user ? (
       <>
-      <NavBar/>
+      <NavBar user={user}
+      setUser={setUser}/>
       <Routes>
         <Route path='/alex' element={<div>
           <h2>Mikee was here</h2>
@@ -27,7 +29,7 @@ export default function App() {
       </Routes>
       </>
       ):( 
-      <AuthPage/>
+      <AuthPage setUser={setUser}/>
       )}
     </div>
   );
