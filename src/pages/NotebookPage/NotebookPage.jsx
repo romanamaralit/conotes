@@ -21,13 +21,13 @@ function NotebookPage () {
             })
         }
 
-    useEffect(() => {
-        console.log(client);
-    }, [client])
-    
-    const handleClick = (event) => {
-        event.preventDefault();
-    }
+useEffect(() => {
+    console.log(client)
+}, [client])
+
+const handleClick = (event) => {
+    event.preventDefault()
+}
 
 
     return (
