@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
-import NewPage from '../NewPage/NewPage';
+import NotebookPage from '../NotebookPage/NotebookPage';
 import InformationPage from '../InformationPage/InformationPage';
+import ClientPage from '../ClientPage/ClientPage';
 import { Routes, Route} from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 
@@ -24,8 +25,8 @@ export default function App() {
           <button>Click me!</button>
         </div>}
         />
-        <Route path="/information/new" element={<NewPage />} />
-        <Route path="/information" element={<InformationPage />} />
+        <Route path="/notebook" element={<NotebookPage />} />
+        <Route path="/clients" element={<ClientPage />} />
       </Routes>
       </>
       ):( 

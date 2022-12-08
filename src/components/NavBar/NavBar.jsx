@@ -11,9 +11,9 @@ function NavBar ({user, setUser}) {
       }
 
     return (
-        <nav><Link to="/information">Information</Link>
+        <nav><Link to="/notebook">Notebook</Link>
         &nbsp; | &nbsp;
-        <Link to="/information/new">New Page</Link>
+        <Link to="/clients">Clients</Link>
         <div>Welcome, {user.name}</div>
         &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
         </nav>
