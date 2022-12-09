@@ -1,6 +1,7 @@
 # CoNotes
 
 ## Background
+Trello Board: [https://trello.com/b/d3jMgwXc/project-4]
 Application: CoNotes
 
 CoNotes is an application where therapist can easily take notes during session just by clicking buttons. 
