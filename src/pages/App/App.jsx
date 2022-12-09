@@ -1,37 +1,33 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import './App.css';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
+import NotebookListPage from '../NotebookListPage/NotebookListPage';
 import NotebookPage from '../NotebookPage/NotebookPage';
-import InformationPage from '../InformationPage/InformationPage';
-import ClientPage from '../ClientPage/ClientPage';
-import { Routes, Route} from 'react-router-dom';
+import NotebookDetailsPage from '../NotebookDetailsPage/NotebookDetailsPage';
 import NavBar from '../../components/NavBar/NavBar';
+import {index} from '../../utilities/notebooks-api'
 
-import './App.css';
 
 export default function App() {
-  //im intentionally leaving this empty (null)
-  const [user, setUser] = useState(getUser())
-  return (
-    <div className="App">
-      App
-      {user ? (
-      <>
-      <NavBar user={user}
-      setUser={setUser}/>
-      <Routes>
-        <Route path='/alex' element={<div>
-          <h2>Mikee was here</h2>
-          <button>Click me!</button>
-        </div>}
-        />
-        <Route path="/notebook" element={<NotebookPage />} />
-        <Route path="/clients" element={<ClientPage />} />
-      </Routes>
-      </>
-      ):( 
-      <AuthPage setUser={setUser}/>
-      )}
-    </div>
-  );
+  const [user, setUser] = useState(getUser());
+  index().then(notebooks =>
+    console.log(notebooks))
+      return (
+    <main className="App">
+      { user ?
+        <>
+          <NavBar user={ user } setUser={setUser} />
+          <Routes>
+            <Route path="/" element={<NotebookListPage />} />
+            <Route path="/notebooks" element={<NotebookPage />} />
+            <Route path="/notebooks/:notebookId" element={<NotebookDetailsPage />} />
+          </Routes>
+        </>
+        :
+        <AuthPage setUser={setUser} />
+      }
+    </main>
+  )
 }

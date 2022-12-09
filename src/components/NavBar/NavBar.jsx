@@ -1,23 +1,18 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
-import { logOut} from '../../utilities/users-service'
+import * as userService from '../../utilities/users-service';
 
-function NavBar ({user, setUser}) {
-    function handleLogOut() {
-        // Delegate to the users-service
-        logOut();
-        // Update state will also cause a re-render
-        setUser(null);
-      }
+export default function NavBar({user,setUser}) {
 
-    return (
-        <nav><Link to="/notebook">Notebook</Link>
-        &nbsp; | &nbsp;
-        <Link to="/clients">Clients</Link>
-        <div>Welcome, {user.name}</div>
-        &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
-        </nav>
-    )
+  function handleLogOut() {
+    userService.logOut();
+    setUser(null);
+  }
+
+  return (
+    <>
+        <Link to="/" href="#">Home</Link>
+        <h3>Welcome, {user.name}!</h3>
+        <Link to=""href="#" onClick={handleLogOut}>Log Out</Link>
+    </>
+  )
 }
-
-export default NavBar
