@@ -5,12 +5,10 @@ Application: CoNotes
 
 CoNotes is an application where therapist can easily take notes during session just by clicking buttons. 
 
-## Screenshot of Game
-![homepage](https://i.imgur.com/xrVZDNZ.png)
-![page to add a subject](https://i.imgur.com/8efeP60.png)
-![page with all the subjects](https://i.imgur.com/lqxPu56.png)
-![page to add a task](https://i.imgur.com/8yeNQmG.png)
-![page to edit details about the task](https://i.imgur.com/Q137OZQ.png)
+## Screenshot of App
+![homepage](https://i.imgur.com/cUAfwyz.png)
+![page to add a subject](https://i.imgur.com/qRREDPa.png)
+![page with all the subjects](https://i.imgur.com/HikJIPJ.png)
 
 ### Technologies Used
 -JavaScript
