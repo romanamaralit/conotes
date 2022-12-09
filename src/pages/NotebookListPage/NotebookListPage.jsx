@@ -35,13 +35,13 @@ export default function NotebookListPage() {
                         <div key={notebook._id}>
                             <Link to={`/notebooks/${notebook._id}`}>Session</Link>
                             <button onClick={deleteButton}
-                                value={notebook._id}>Delete</button>
+                                value={notebook._id}>X</button>
                         </div>
                     )}
                     </div>
                     : <p>Feelings suck!</p>
             }
-            <Link to={`/notebooks`}>New Session</Link>
+            <Link to={`/notebooks`}>Add Session</Link>
         </>
     )
 }
