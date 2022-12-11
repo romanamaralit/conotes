@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import {useParams, Link} from "react-router-dom";
 import {index} from "../../utilities/notebooks-api";
 import {deleteNotebook} from "../../utilities/notebooks-api";
+import {updateNotebook} from "../../utilities/notebooks-api";
 
 export default function NotebookListPage() {
     const [notebooks, setNotebooks] = useState()
@@ -26,6 +27,12 @@ export default function NotebookListPage() {
         removeNotebookById(event.target.value)
     }
 
+    const updateButton = (event) => {
+        console.log(event.target.value)
+        // updateNotebook(event.target.value)
+        // removeNotebookById(event.target.value)
+    }
+
     return (
         <>
             <h1>CoNotes!</h1>
@@ -33,9 +40,11 @@ export default function NotebookListPage() {
                 notebooks ?
                     <div>{notebooks.map(notebook =>
                         <div key={notebook._id}>
-                            <Link to={`/notebooks/${notebook._id}`}>Session</Link>
+                            <Link to={`/notebooks/${notebook._id}`}>{notebook.name}</Link>
                             <button onClick={deleteButton}
                                 value={notebook._id}>X</button>
+                                <button onClick={updateButton}
+                                value={notebook._id}>Edit name</button>
                         </div>
                     )}
                     </div>

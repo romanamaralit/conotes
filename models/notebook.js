@@ -9,6 +9,7 @@ const sessionSchema = new Schema({
 
 
 const notebookSchema = new Schema({
+    name: {type:String},
     sessions: [sessionSchema]
 }, {
     timestamps: true

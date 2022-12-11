@@ -9,7 +9,7 @@ export function show(id) {
     return sendRequest(`${BASE_URL}/${id}`);
 }
 
-export function update(id, notebook) {
+export function updateNotebook(id, notebook) {
     return sendRequest(`${BASE_URL}/${id}`, 'PUT', notebook);
 }
 

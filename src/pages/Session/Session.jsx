@@ -13,9 +13,12 @@ export default function Session ({name,notebook,setNotebook}) {
 <br></br>
 &nbsp;
             {name}
+            <form></form>
             <form onSubmit={onClick}>
                 <button type="submit">Add</button>
             </form>
         </>
     )
 }
+
+
