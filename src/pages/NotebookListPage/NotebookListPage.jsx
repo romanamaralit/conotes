@@ -1,8 +1,9 @@
 import {useState, useEffect} from "react";
-import {useParams, Link} from "react-router-dom";
+import {useParams, Link, Navigate} from "react-router-dom";
 import {index} from "../../utilities/notebooks-api";
 import {deleteNotebook} from "../../utilities/notebooks-api";
-import {updateNotebook} from "../../utilities/notebooks-api";
+import { useNavigate } from "react-router-dom";
+// import {updateNotebook} from "../../utilities/notebooks-api";
 
 export default function NotebookListPage() {
     const [notebooks, setNotebooks] = useState()
@@ -27,10 +28,10 @@ export default function NotebookListPage() {
         removeNotebookById(event.target.value)
     }
 
-    const updateButton = (event) => {
+    const navigate = useNavigate()
+    const editNotebook = (event) => {
         console.log(event.target.value)
-        // updateNotebook(event.target.value)
-        // removeNotebookById(event.target.value)
+        navigate("/edit/"+ event.target.value)
     }
 
     return (
@@ -43,7 +44,7 @@ export default function NotebookListPage() {
                             <Link to={`/notebooks/${notebook._id}`}>{notebook.name}</Link>
                             <button onClick={deleteButton}
                                 value={notebook._id}>X</button>
-                                <button onClick={updateButton}
+                                <button onClick={editNotebook}
                                 value={notebook._id}>Edit name</button>
                         </div>
                     )}

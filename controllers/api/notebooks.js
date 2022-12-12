@@ -45,8 +45,6 @@ async function updateNotebook(req, res) {
     }
 }
 
-
-
 async function deleteNotebook(req, res) {
     try {
         await Notebook.findByIdAndDelete(req.params.id)

@@ -8,6 +8,7 @@ import NotebookPage from '../NotebookPage/NotebookPage';
 import NotebookDetailsPage from '../NotebookDetailsPage/NotebookDetailsPage';
 import NavBar from '../../components/NavBar/NavBar';
 import {index} from '../../utilities/notebooks-api'
+import EditName from '../../components/EditName/EditName';
 
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/" element={<NotebookListPage />} />
             <Route path="/notebooks" element={<NotebookPage />} />
             <Route path="/notebooks/:notebookId" element={<NotebookDetailsPage />} />
+            <Route path="/edit/:notebookId" element={<EditName />} />
           </Routes>
         </>
         :
