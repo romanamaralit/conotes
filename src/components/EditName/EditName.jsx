@@ -6,8 +6,8 @@ import {update} from "../../utilities/notebooks-api";
 export default function EditName() {
     let {notebookId} = useParams()
     console.log(notebookId)
-    // const notebookResult = show(notebookId)
-    // console.log(notebookResult.name)
+    // const notebook = show(notebookId)
+    // console.log(notebook.name)
     const [notebook, setNotebook] = useState({
         name: '',
         sessions: []
@@ -17,7 +17,7 @@ export default function EditName() {
         async function fetchNotebookAndUpdateState() {
             const response = await show(notebookId)
             setNotebook(response)
-            console.log(response)
+            console.log(response) //should show id
         }
         fetchNotebookAndUpdateState()
     }, [notebookId])
