@@ -8,15 +8,13 @@ export default function Session ({name,notebook,setNotebook}) {
     }
     return (
         <>
-            &nbsp; 
-<br></br> 
+        <div className="sessions">
 <br></br>
-&nbsp;
             {name}
-            <form></form>
             <form onSubmit={onClick}>
                 <button type="submit">Add</button>
             </form>
+        </div>
         </>
     )
 }

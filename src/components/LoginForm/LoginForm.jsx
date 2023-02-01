@@ -32,10 +32,13 @@ export default function LoginForm({ setUser }) {
       <div>
         <form autoComplete="off" onSubmit={handleSubmit}>
           <div>
-            <label>Email</label>
-            <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-            <label>Password</label>
-            <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
+          <h1>CoNotes !</h1>
+            <label>Email</label> <br></br>
+            <input className="logininput" type="text" name="email" value={credentials.email} onChange={handleChange} required />
+            <br></br>
+            <label>Password</label> <br></br>
+            <input className="logininput" type="password" name="password" value={credentials.password} onChange={handleChange} required />
+            <br></br>
             <button type="submit" >LOG IN</button>
           </div>
         </form>

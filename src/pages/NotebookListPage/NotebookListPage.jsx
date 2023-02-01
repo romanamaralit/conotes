@@ -36,16 +36,17 @@ export default function NotebookListPage() {
 
     return (
         <>
-            <h1>CoNotes!</h1>
+            <h1>CoNotes !</h1>
             {
                 notebooks ?
                     <div>{notebooks.map(notebook =>
-                        <div key={notebook._id}>
+                        <div className="sessioncontainer" key={notebook._id}>
                             <Link to={`/notebooks/${notebook._id}`}>{notebook.name}</Link>
+                            <br></br>
                             <button onClick={deleteButton}
                                 value={notebook._id}>X</button>
                                 <button onClick={editNotebook}
-                                value={notebook._id}>Edit name</button>
+                                value={notebook._id}>Edit</button>
                         </div>
                     )}
                     </div>

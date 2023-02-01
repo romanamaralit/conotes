@@ -18,12 +18,13 @@ export default function NotebookDetailsPage() {
             {
                 notebook ?
                     <p>{notebook.sessions.map(session =>
-                        <ul key={session._id}>
-                            <li>{session.name}</li>
-                        </ul>)}
+                        <p key={session._id}>
+                            <p>{session.name}</p>
+                        </p>)}
                     </p>
                     : <p>No emotions today</p>
             }
         </>
     )
 }
+

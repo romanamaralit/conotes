@@ -6,10 +6,34 @@ export const sessionTypes = [
         'name': 'Good',
     },
     {
-        'name': 'Bad',
+        'name': 'Parents',
     },
     {
-        'name': 'Wow',
+        'name': 'Set boundaries',
+    },
+    {
+        'name': 'Medication',
+    },
+    {
+        'name': 'Reschedule',
+    },
+    {
+        'name': 'Break up',
+    },
+    {
+        'name': 'Work',
+    },
+    {
+        'name': 'Smoking',
+    },
+    {
+        'name': 'Alcohol',
+    },
+    {
+        'name': 'Cry',
+    },
+    {
+        'name': 'Drugs',
     }
 ]
 

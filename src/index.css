@@ -1,3 +1,67 @@
 :root {
-  background-color: #35908a
+  background-color: #35908a;
+  text-align: center;
+  place-content: center;
    }
+
+h1 {
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.home {
+  font-size: 2rem;
+}
+
+.logout {
+  font-size: .8rem;
+}
+
+body {
+  width:75vh;
+  border-radius: 25px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.sessioncontainer {
+  margin:2rem;
+}
+
+button {
+  padding:10px 30px;
+  margin: 0px .8rem;
+}
+
+.addsession {
+  padding: 10rem;
+  margin: 2rem;
+  border: pink;
+}
+
+h3 {
+  padding: 2rem;
+  text-align: center;
+}
+
+.input {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.savebutton {
+  margin: 2rem;
+  width: 10rem;
+}
+
+.logininput {
+  text-align: center;
+  display: inline-block;
+}
+
+.sessions{
+  text-align: center;
+  display: inline-block;
+  padding: .5rem;
+}

@@ -10,9 +10,10 @@ export default function NavBar({user,setUser}) {
 
   return (
     <>
-        <Link to="/" href="#">Home</Link>
-        <h3>Welcome, {user.name}!</h3>
-        <Link to=""href="#" onClick={handleLogOut}>Log Out</Link>
+        <Link className="home" to="/" href="#">Home</Link>
+        <br></br>
+        {/* <h3>Welcome, {user.name}!</h3> */}
+        <Link className="logout" to=""href="#" onClick={handleLogOut}>Log Out</Link>
     </>
   )
 }
